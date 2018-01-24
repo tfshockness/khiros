@@ -3,9 +3,9 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 //import { Provider } from 'react-redux';
 
 import App from './App';
-import HomePage from './home/HomePage';
-import AboutPage from './about/AboutPage';
-import BlogPage from './blog/BlogPage';
+import HomePage from '.views/home/HomePage';
+import AboutPage from '.views/about/AboutPage';
+import BlogPage from '.views/blog/BlogPage';
 
 const routers = () => (
     <BrowserRouter>
