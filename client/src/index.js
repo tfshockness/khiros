@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-
 import Routers from './routes';
 import registerServiceWorker from './registerServiceWorker';
 import configStore from './store/configStore';
@@ -13,3 +12,4 @@ ReactDOM.render(
     </Provider>
     , document.getElementById('root'));
 registerServiceWorker();
+

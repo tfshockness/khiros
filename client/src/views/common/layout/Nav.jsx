@@ -2,18 +2,18 @@ import React from 'react';
 
 
 const Nav = () => (
-    <ul classNameName="nav">
+    <ul className="nav">
         <li className="nav-item">
-            <a className="nav-link active" href="#"><img src="./khiros.png"/></a>
+            <a className="nav-link active"><img src="./khiros.png" alt="Just something to stop error"/></a>
         </li>
         <li className="nav-item">
-            <a className="nav-link" href="#">Link</a>
+            <a className="nav-link">Link</a>
         </li>
         <li className="nav-item">
-            <a className="nav-link" href="#">Link</a>
+            <a className="nav-link">Link</a>
         </li>
         <li className="nav-item">
-            <a className="nav-link" href="#">Disabled</a>
+            <a className="nav-link">Disabled</a>
         </li>
     </ul>
 )
