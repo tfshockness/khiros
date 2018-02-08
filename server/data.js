@@ -3,18 +3,23 @@ export default {
         name: "Khiros",
         email: "atentimento@khiros.com",
         logoImage: "",
-        phones: {
-            tel: "(69) 3212-1231",
-            cel: "(69) 3213-3123"
-        },
-        address: {
-            city: "Porto Velho",
-            province: "Rondonia",
-            country: "Brasil",
-            postalCode: "13250-526",
-            street: "Avenida do meio",
-            number: 4132
-        },
+        branch: [
+            {
+                id: 1,
+                phone: {
+                    tel: "(69) 3212-1231",
+                    cel: "(69) 3213-3123"
+                },
+                address:{
+                city: "Porto Velho",
+                province: "Rondonia",
+                country: "Brasil",
+                postalCode: "13250-526",
+                street: "Avenida do meio",
+                number: 4132
+                }
+            }
+        ],
         about: "This is the text about the company",
         aboutImage: ""
     },
@@ -27,7 +32,8 @@ export default {
             link: {
                 label: "",
                 url: ""
-            }
+            },
+            isActive: true
 
         },
         {
@@ -37,22 +43,28 @@ export default {
             link: {
                 label: "",
                 url: ""
-            }
+            },
+            isActive: true
         }
     ],
 
-    blog: [
+    post: [
         {
             id: 1,
             image: "",
             title: "My first Post",
             subtitle: "Something that can goes more than just one phrase.",
-            tag: "Health",
+            category: "Health",
             text: "Loren ipsun :p",
-            socialMedia: {
-                facebook: "",
-                twitter: ""
-            }
+            //Maybe can be add on the fly while rendering the page by the component.
+            // socialMedia: {
+            //     facebook: "",
+            //     twitter: ""
+            // },
+            status: 'rascunho',
+            createdAt: "Today",
+            publishedAt: "Receive date when it was published"
+
         }
     ],
 
@@ -67,7 +79,8 @@ export default {
                     speciality: "Developer",
                     profileImg: "",
                     credentials: "NO TEINS",
-                    bio: "Something about me and about my qualities as a professional"
+                    bio: "Something about me and about my qualities as a professional",
+                    isActive: true
                 }
             ]
         },
@@ -82,7 +95,8 @@ export default {
                     speciality: "Scrum Master",
                     profileImg: "",
                     credentials: "CRA 132314",
-                    bio: "Loren is not a psun person"
+                    bio: "Loren is not a psun person",
+                    isActive: true
                 }
             ]
         }
@@ -90,3 +104,5 @@ export default {
 
 
 }
+
+//CONTS for Post Status: Published (Publicado), Draft (Rascunho), Archive (Arquivo), Deactivated (Desativado)
