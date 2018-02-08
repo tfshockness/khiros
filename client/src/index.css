@@ -91,3 +91,78 @@ ul.navbar-nav li a.nav-link {
     font-size: 20px;
     padding-right: 6px;
 }
+
+/* Carousel */
+.slider_wrapper{
+    border-top: 6px solid #8FD6EC;
+}
+
+h1.carousel_text{
+    position: absolute;
+    color: #fff;
+    top: 41%;
+    left: 25%;
+    font-size: 1.9em;
+    font-weight: 200;
+    letter-spacing: 2px;
+}
+
+h3.carousel_sub_text{
+    position: absolute;
+    color: #dcdada;
+    top: 52%;
+    left: 39%;
+    font-size: 1.4em;
+    font-weight: 200;
+    letter-spacing: 2px;
+}
+
+h3.carousel_sub_text i{
+    font-size: 28px;
+}
+
+@media only screen and (max-width: 1245px){
+    h1.carousel_text {
+        left: 23%;
+        font-size: 1.8em;
+    }
+    h3.carousel_sub_text{
+        font-size: 1.3em;
+    }
+    h3.carousel_sub_text i{
+        font-size: 26px;
+    }
+}
+
+@media only screen and (max-width: 1094px){
+    h1.carousel_text {
+        left: 21%;
+        font-size: 1.5em;
+    }
+    h3.carousel_sub_text{
+        font-size: 1.0em;
+    }
+    h3.carousel_sub_text i{
+        font-size: 23px;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    h1.carousel_text {
+        left: 16%;
+        font-size: 1.4em;
+    }
+    h3.carousel_sub_text{
+        font-size: 0.9em;
+    }
+    h3.carousel_sub_text i{
+        font-size: 21px;
+    }
+}
+
+@media only screen and (max-width: 771px){
+    h1.carousel_text {
+        left: 13%;
+        font-size: 1.2em;
+    }
+}
