@@ -167,6 +167,9 @@ h3.carousel_sub_text i{
     }
 }
 
+
+/* Proudct Carousel */
+
 .fluid_image img{
     max-width: 100%;
     height: auto;
@@ -179,12 +182,39 @@ h3.carousel_sub_text i{
 
 .productSlider_image img{
     height: 269px;
-}
-
-.col_1{
-    width: 5%;
+    width: 300px;
 }
 
 .col_3{
-    width: 28%;
+    flex: 0 0 29%;
+    max-width: 29%;
+}
+
+.col_3:nth-of-type(3n+2){
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+#productSlider {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.productSlider_row{
+    margin: 0 auto;
+    padding-left: 10%;
+    text-align: center;
+}
+
+span.productSlider_icon{
+    background-color: #55c4e4;
+    width: 30px;
+    height: 36px;
+    border-radius: 2px;
+}
+
+@media only screen and (max-width: 968px){
+    #productSlider {
+        width: 100%;
+    }
 }

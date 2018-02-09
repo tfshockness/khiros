@@ -10,13 +10,7 @@ export default class ProductSlider extends Component{
                 <div id="productSlider" className="carousel slide" data-ride="carousel">
                     <div className="carousel-inner">
                         <div className="carousel-item active">
-                            <div className="row">
-                                <div className="col_1">
-                                    <a className="carousel-control-prev" href="#productSlider" role="button" data-slide="prev">
-                                        <span className="carousel-control-prev-icon" aria-hidden="true"/>
-                                        <span className="sr-only">Previous</span>
-                                    </a> {/* .carousel-prev */}
-                                </div> {/* .col */}
+                            <div className="row productSlider_row">
                                 <div className="col_3">
                                     <div className="productSlider_image fluid_image">
                                         <img src={spine1}/>
@@ -32,14 +26,15 @@ export default class ProductSlider extends Component{
                                         <img src={backpain}/>
                                     </div> {/* .productSlider_image */}
                                 </div> {/* .col */}
-                                <div className="col_1">
-                                    <a className="carousel-control-next" href="#productSlider" role="button" data-slide="next">
-                                        <span className="carousel-control-next-icon" aria-hidden="true"/>
-                                        <span className="sr-only">Next</span>
-                                    </a> {/* .carousel-next */}
-                                </div> {/* .col */}
                             </div> {/* .row */}
-                                
+                            <a className="carousel-control-prev" href="#productSlider" role="button" data-slide="prev">
+                                <span className="carousel-control-prev-icon productSlider_icon" aria-hidden="true"/>
+                                <span className="sr-only">Previous</span>
+                            </a> {/* .carousel-prev */}
+                            <a className="carousel-control-next" href="#productSlider" role="button" data-slide="next">
+                                <span className="carousel-control-next-icon productSlider_icon" aria-hidden="true"/>
+                                <span className="sr-only">Next</span>
+                            </a> {/* .carousel-next */}
                         </div> {/* .carousel-item */}
                     </div> {/* .carousel-inner */}
                     
