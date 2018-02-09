@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Slider1 from '../../image/slider.jpg';
+import Slider1 from '../../../image/slider.jpg';
 
 export default class MainSlider extends Component{
     

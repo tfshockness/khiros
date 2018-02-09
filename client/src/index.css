@@ -166,3 +166,25 @@ h3.carousel_sub_text i{
         font-size: 1.2em;
     }
 }
+
+.fluid_image img{
+    max-width: 100%;
+    height: auto;
+}
+
+.productSlider_image{
+    -webkit-filter: brightness(0.30);
+    filter: brightness(0.50);
+}
+
+.productSlider_image img{
+    height: 269px;
+}
+
+.col_1{
+    width: 5%;
+}
+
+.col_3{
+    width: 28%;
+}

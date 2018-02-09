@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import MainSlider from './MainSlider.jsx';
+import MainSlider from './components/MainSlider';
+import ProductSlider from './components/ProductSlider';
 
 export default class HomePage extends Component{
     
@@ -7,6 +8,7 @@ export default class HomePage extends Component{
         return(
             <div>
                 <MainSlider />
+                <ProductSlider />
             </div>
         );
     }
