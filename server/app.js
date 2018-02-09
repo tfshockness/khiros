@@ -39,7 +39,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.send({error: 'Page Not Found'});
+  res.send({error: 'Page Not Foundasdasd'});
 });
 
 module.exports = app;
