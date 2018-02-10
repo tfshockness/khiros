@@ -20,34 +20,8 @@ describe('Validation inside of Post Rules', function(){
     });
 
 
-    it('should return title, subtitle, text, and image Error for a empty object', function(){
-        try {
-            postServices.addPost({});
-        } catch (error) {
-            error.length.should.be.equal(4);
-        }
-    });
-
-    it('should return title error when title is empty', function(){
-        try{
-            user.title = "    ";
-            postServices.addPost(user);
-        }catch(error){
-            error.length.should.be.equal(1);
-            error[0].should.be.equal(postForm.title.pt);
-        }
-    });
-    it('should have default value of rascunho for status when undefined/null', function(){
-        try {
-            user.status = undefined;
-            postServices.addPost(user);
-        } catch (error) {
-            //Should never run!
-            true.should.be.equal(false);
-        }
-    });
-
-    it('should not throw a error message validation', function(){
-        postServices.addPost(user);
-    });
+    it('should return title, subtitle, text, and image Error for a empty object');
+    it('should return title error when title is empty');
+    it('should have default value of rascunho for status when undefined/null');
+    it('should not throw a error message validation');
 });
