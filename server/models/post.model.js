@@ -1,13 +1,17 @@
 var mongoose = require('mongoose');
+var {titleValidator, 
+    categoryValidator, 
+    statusValidator, 
+    textValidator} = require('../config/validators');
 
 var Schema = mongoose.Schema;
 
 var postSchema = new Schema({
-    title: String,
+    title: { type:String, required: true, validate: titleValidator },
     subtitle: String,
-    category: String,
-    text: String,
-    status: { type: String, default: 'rascunho' },
+    category: { type:String, required: true, validate: categoryValidator },
+    text: { type:String, required: true, validate: textValidator },
+    status: { type: String, required: true,  default: "Rascunho", enum: ["Rascunho", "Publicado", "Arquivado", "Desativado" ], validate: statusValidator},
     image: String,
     createdAt: { type: Date, default: Date.now },
     publishedAt: Date

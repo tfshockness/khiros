@@ -22,7 +22,7 @@ app.use(cookieParser());
 
 app.use('/', home);
 app.use('/users', users);
-app.use('/post', post);
+app.use('/posts', post);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -39,7 +39,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.send({error: 'Page Not Foundasdasd'});
+  res.send({error: 'Page Not Found'});
 });
 
 module.exports = app;

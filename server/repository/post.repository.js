@@ -1,7 +1,7 @@
 var Post = require('../models/post.model');
 
 module.exports = {
-    addPost({title, subtitle, category, text, image, status, publishedAt}){
+    add({ title, subtitle, category, text, image, status, publishedAt }) {
         let newPost = new Post(
             {
                 title,
@@ -12,9 +12,15 @@ module.exports = {
                 status,
                 publishedAt
             });
-           
-                newPost.save( err => {
-                    if(err) throw err;
-                })
+
+        newPost.save(err => {
+            if (err) throw err;
+        })
+    },
+    getAll() {
+        return Post.find();
+    },
+    getById(id){
+        return Post.findById(id)
     }
 }

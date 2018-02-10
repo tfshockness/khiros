@@ -3,12 +3,12 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var professionalInfo = new Schema({
-    name: String,
-    speciality: String,
+    name: { type:String, required: true, match: /[a-zA-Z]/ },
+    speciality: { type:String, required: true },
     profileImg: String,
     credentials: String,
     bio: String,
-    isActive: Boolean
+    isActive: { type: Boolean, default: true }
 
 });
 
