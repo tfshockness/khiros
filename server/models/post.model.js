@@ -7,11 +7,11 @@ var {titleValidator,
 var Schema = mongoose.Schema;
 
 var postSchema = new Schema({
-    title: { type:String, required: true, validate: titleValidator },
+    title: { type:String, required: true  },
     subtitle: String,
-    category: { type:String, required: true, validate: categoryValidator },
-    text: { type:String, required: true, validate: textValidator },
-    status: { type: String, required: true,  default: "Rascunho", enum: ["Rascunho", "Publicado", "Arquivado", "Desativado" ], validate: statusValidator},
+    category: { type:String, required: true },
+    text: { type:String, required: true },
+    status: { type: String, required: true,  default: "Rascunho", enum: ["Rascunho", "Publicado", "Arquivado", "Desativado" ]},
     image: String,
     createdAt: { type: Date, default: Date.now },
     publishedAt: Date

@@ -39,7 +39,7 @@ exports.statusValidator = [
 
 exports.categoryValidator = [
     function(val){
-        return check(val);
+        return isEmpty(val);
     },
     postForm.category.pt
 ]
