@@ -25,9 +25,36 @@ describe('Post Validation', function(){
             should.exist(e.errors.category);
             should.not.exist(e.errors.subtitle);
             should.not.exist(e.errors.status);
+            should.not.exist(e.errors.publishAt);
+            should.not.exist(e.errors.image);
             done();
         });
     });
-    it('should not save spaces or empty string on title, category, and text');
-    it('should accept the inputs');
+    it('should not save spaces or empty string on title, category, and text', function(done){
+        let post = new Post({
+            title: "        ",
+            category: "        ",
+            text: "      "
+        });
+
+        post.validate( e => {
+            should.exist(e.errors.text);
+            should.exist(e.errors.title);
+            should.exist(e.errors.category);
+            should.not.exist(e.errors.subtitle);
+            should.not.exist(e.errors.status);
+            shoud.not.exist(e.errors.publishAt);
+            should.not.exist(e.errors.image);
+            done();
+        });
+
+    });
+    it('should accept the inputs', function(done){
+        let post = new Post(postModel);
+
+        post.validate( e => {
+            should.not.exist(e);
+            done();
+        })
+    });
 });
