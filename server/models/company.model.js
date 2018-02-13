@@ -7,7 +7,7 @@ var address = new Schema({
     province: String,
     country: String,
     postalCode: String,
-    string: String,
+    street: String,
     number: Number
 });
 
