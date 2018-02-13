@@ -28,4 +28,4 @@ var companySchema = new Schema({
     aboutImage: String
 });
 
-exports.module = mongoose.model('Company', companySchema);
+module.exports = mongoose.model('Company', companySchema);
