@@ -1,6 +1,6 @@
 const { postForm } = require('../lookup/validationMessages');
 
-const isEmpty = val => typeof(val) !== "string" || val.trim().length < 1;
+const isEmpty = val => typeof(val) === "string" && val.trim().length > 1;
 
 exports.titleValidator =[
     function(val){
