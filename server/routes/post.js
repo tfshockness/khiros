@@ -1,34 +1,62 @@
 var express = require('express');
 var router = express.Router();
-var Post = require('../models/post.model');
+//var Post = require('../models/post.model');
 const postServices = require('../services/post.services');
 
+/**
+ * Get All Posts
+ */
+
+ //TODO Implement Pagination
 router.get('/', (req, res) => {
     const posts = postServices.getAllPost();
     
-    posts.then( allPost => res.status(200).send({success: true, data: allPost}))
-         .catch(error => res.status(500).send({success: false, message: error}))
+    posts.then( allPost => res.status(200).send(allPost))
+         .catch(error => res.status(400).send({error: error}))
 });
 
-router.get('/:id', (req, res) => {
-    const post = postServices.getPostById(req.params.id);
-    post.then( singlePost => {
-        singlePost ? 
-        res.status(200).send({success: true, data: singlePost}) : 
-        res.status(404).send({success: false, message: "Post not found"});
-    
-    })
-        .catch( error => res.status(500).send({success: false, message: error}));
-});
-
+/**
+ * Add a New Post
+ */
 router.post('/', (req, res) => {
     try {
         postServices.addPost(req.body);
     } catch (err) {
-        return res.status(403).send({ success: false, message: "err" });
+        return res.status(403).send({ error: "err" });
     }
 
-    return res.status(302).send({ success: true });
+    //TODO: return the Post recent created
+    return res.status(201).send({ success: true });
+});
+
+
+/**
+ * Get Post by Id
+ */
+router.get('/:id', (req, res) => {
+    const post = postServices.getPostById(req.params.id);
+    post.then( singlePost => {
+        singlePost ? 
+        res.status(200).send(singlePost) : 
+        res.status(404).send({ error: `Post with id: ${req.params.id} was Not Found.`});
+    
+    })
+        .catch( error => res.status(400).send({error: "The Id sent is not valid or incorrect."}));
+});
+
+/**
+ * Update a post by Id
+ * I dont know if should be put or patch. Or whatever
+ */
+router.put('/:id', (req, res) => {
+    //TODO - implemente Put 
+});
+
+/**
+ * Delete a post by Id
+ */
+router.delete('/:id', (req, res) => {
+
 });
 
 module.exports = router;

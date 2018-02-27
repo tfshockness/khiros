@@ -11,6 +11,7 @@ mongoose.connect('mongodb://admin:1234Abcd@khiros-shard-00-00-hkxgz.mongodb.net:
 var home = require('./routes/home');
 var users = require('./routes/users');
 var post = require('./routes/post');
+var carousels = require('./routes/carousel');
 
 var app = express();
 
@@ -23,6 +24,7 @@ app.use(cookieParser());
 app.use('/', home);
 app.use('/users', users);
 app.use('/posts', post);
+app.use('/carousels', carousels);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
