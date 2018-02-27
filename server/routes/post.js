@@ -19,14 +19,15 @@ router.get('/', (req, res) => {
  * Add a New Post
  */
 router.post('/', (req, res) => {
+    let post;
     try {
-        postServices.addPost(req.body);
+        post = postServices.addPost(req.body);
     } catch (err) {
         return res.status(403).send({ error: "err" });
     }
 
     //TODO: return the Post recent created
-    return res.status(201).send({ success: true });
+    return res.status(201).send(post);
 });
 
 

@@ -1,6 +1,7 @@
 var Post = require('../models/post.model');
 
-module.exports = {
+class PostRepository{
+
     add({ title, subtitle, category, text, image, status, publishedAt }) {
         let newPost = new Post(
             {
@@ -15,12 +16,16 @@ module.exports = {
 
         newPost.save(err => {
             if (err) throw err;
-        })
-    },
+        });
+        return newPost;
+    }
+
     getAll() {
         return Post.find();
-    },
+    }
+
     getById(id){
         return Post.findById(id)
     }
 }
+module.exports = new PostRepository();
