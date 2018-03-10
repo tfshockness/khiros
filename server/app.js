@@ -4,9 +4,14 @@ var path = require('path');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+
+mongoose.connect('mongodb://admin:1234Abcd@khiros-shard-00-00-hkxgz.mongodb.net:27017,khiros-shard-00-01-hkxgz.mongodb.net:27017,khiros-shard-00-02-hkxgz.mongodb.net:27017/test?ssl=true&replicaSet=khiros-shard-0&authSource=admin');
 
 var home = require('./routes/home');
 var users = require('./routes/users');
+var post = require('./routes/post');
+var carousels = require('./routes/carousel');
 
 var app = express();
 
@@ -18,6 +23,8 @@ app.use(cookieParser());
 
 app.use('/', home);
 app.use('/users', users);
+app.use('/posts', post);
+app.use('/carousels', carousels);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
