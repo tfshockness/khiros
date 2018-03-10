@@ -7,7 +7,7 @@ const Nav = () => (
             <p className="pull-right"><i className="fa fa-phone" data-fa-transform="flip-v"/> (69) 3302-0285</p>
         </div>
         <nav className="navbar navbar-expand-lg navbar-light">
-            <a className="nav-link active"><img src={khirosLogo} alt="Just something to stop error"  height="50" width="50"/></a>
+            <a className="nav-link active"><img src={khirosLogo} alt="Just something to stop error"  height="50" alt="Khiros Logo"/></a>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>
