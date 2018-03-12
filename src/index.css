@@ -56,6 +56,17 @@ table {
     font-weight: normal !important;
 }
 
+.khiros-page-title{
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+
+.khiros-page-general{
+    font-family: 'Roboto', sans-serif;
+}
+
 /*  Nav  */
 
 .nav_wrapper{
@@ -368,4 +379,35 @@ p.info_box_absolute {
     .footer_title{
         margin-top: 9%;
     }
+}
+
+/* Sobre About Page */
+.sobre_top{
+    color: #C1BBB5;
+    font-size: 15px;
+    text-align: center;
+    line-height: 1.3;
+    margin-top: 5%;
+    margin-bottom: 4%;
+}
+
+.team_name{
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+h2.team_position {
+    margin-bottom: 20px;
+    font-size: .9em;
+    font-weight: bold;
+    color: #A2A3A4;
+}
+
+p.team_intro {
+    color: #A2A3A4;
+    font-size: .8em;
+    letter-spacing: .7px;
+    font-weight: lighter;
+    font-family: 'Lato';
+    line-height: 1.1;
 }

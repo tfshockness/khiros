@@ -1,5 +1,6 @@
 import React from 'react';
 import khirosLogo from './khiros.png';
+import { Link } from 'react-router-dom';
 
 const Nav = () => (
     <div className="nav_wrapper">
@@ -18,7 +19,7 @@ const Nav = () => (
                         A KHIROS
                         </a>
                         <div className="dropdown-menu" aria-labelledby="navDropKhiros">
-                            <a className="dropdown-item" href="#">drop1</a>
+                            <Link className="dropdown-item" to="/sobre-a-khiros">Sobre</Link>
                             <a className="dropdown-item" href="#">drop2</a>
                             <a className="dropdown-item" href="#">drop3</a>
                         </div>
