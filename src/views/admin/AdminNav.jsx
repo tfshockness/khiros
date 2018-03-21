@@ -1,5 +1,5 @@
 import React from 'react';
-import khirosLogo from './khiros.png';
+import khirosLogo from '../common/layout/khiros.png';
 import { Link } from 'react-router-dom';
 
 const Nav = () => (
@@ -8,7 +8,7 @@ const Nav = () => (
             <p className="pull-right"><i className="fa fa-phone" data-fa-transform="flip-v"/> (69) 3302-0285</p>
         </div>
         <nav className="navbar navbar-expand-lg navbar-light">
-            <Link to="/" className="nav-link active"><img src={khirosLogo} alt="Just something to stop error"  height="50" alt="Khiros Logo"/></Link>
+            <a className="nav-link active"><img src={khirosLogo} alt="Just something to stop error"  height="50" alt="Khiros Logo"/></a>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>
@@ -16,7 +16,7 @@ const Nav = () => (
                 <ul className="navbar-nav justify-content-center">
                     <li className="nav-item dropdown">
                         <a className="nav-link dropdown-toggle" href="#" id="navDropKhiros" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        A KHIROS
+                        A KHIROS Admin
                         </a>
                         <div className="dropdown-menu" aria-labelledby="navDropKhiros">
                             <Link className="dropdown-item" to="/sobre-a-khiros">Sobre</Link>
