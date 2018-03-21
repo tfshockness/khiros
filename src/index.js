@@ -5,6 +5,11 @@ import Routers from './routes';
 import registerServiceWorker from './registerServiceWorker';
 import configStore from './store/configStore';
 
+if (process.env.NODE_ENV === 'development') {
+    const {whyDidYouUpdate} = require('why-did-you-update')
+    whyDidYouUpdate(React)
+  };
+
 const store = configStore();
 ReactDOM.render(
     <Provider store={store}>
