@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component, PureComponent } from 'react';
 import Slider1 from '../../../image/slider.jpg';
 
-export default class MainSlider extends Component{
+export default class MainSlider extends PureComponent{
     
     render(){
         return(

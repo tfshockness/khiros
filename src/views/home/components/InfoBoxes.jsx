@@ -1,9 +1,9 @@
-import React , { Component } from 'react';
+import React , { Component, PureComponent } from 'react';
 import demo1 from '../../../image/demo1.jpg';
 import demo2 from '../../../image/demo2.jpg';
 import demo3 from '../../../image/demo3.jpg';
 
-export default class InfoBoxes extends Component{
+export default class InfoBoxes extends PureComponent{
     render(){
         return(
             <div>
