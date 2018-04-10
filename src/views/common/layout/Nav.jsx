@@ -19,13 +19,12 @@ const Nav = () => (
                         A KHIROS
                         </a>
                         <div className="dropdown-menu" aria-labelledby="navDropKhiros">
+                            <Link className="dropdown-item" to="/profissionais">Profissionais</Link>
                             <Link className="dropdown-item" to="/sobre-a-khiros">Sobre</Link>
-                            <a className="dropdown-item" href="#">drop2</a>
-                            <a className="dropdown-item" href="#">drop3</a>
                         </div>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">BLOG</a>
+                        <Link className="nav-link" to="/blog">BLOG</Link>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link" href="#">MIDIA</a>
@@ -41,7 +40,7 @@ const Nav = () => (
                         </div>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">INSTITUTO TRATA</a>
+                        <Link className="nav-link" to="/instituto-trata">INSTITUTO TRATA</Link>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link" href="#">CONTATO</a>
